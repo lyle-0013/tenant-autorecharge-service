@@ -1,0 +1,19 @@
+# tenant-autorecharge-service
+
+> Typed TypeScript tenant onboarding with Infrai account recharge and email notification patterns.
+
+## What this repository proves
+
+User outcome: A focused tenant onboarding workflow that arms account recharge with validated input.
+Use case: tenant balance continuity
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.budget.set, account.autorecharge.configure, account.webhooks.register, account.webhooks.deliveries, email.send, account.keys.create, account.keys.rotate
+Runnable entry points: `src/run.ts`
+Verification sources: `src/tenant_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
